@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #1B1B1E;
+    --btn-color: #E69510;
+    --btn-color-hover: #CF860E;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #eee;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    margin: 50px auto;
+    border-radius: 3px;
+}
+
+
+/*----------------- HEADER -------------------------*/
+
+.contenedor header nav{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+    background: var(--main-color);
+    color: #fff
+}
+
+.contenedor header nav h1{
+    width: 50%;
+    
+}
+
+.contenedor header nav h1 a{
+    
+    text-decoration: none; /*no estaba*/
+    color:#fff;
+}
+
+.contenedor header nav .menu a{
+    text-decoration: none;
+    color: #fff; 
+    border-right:1px solid #fff;
+    padding: 5px 40px;
+    display: inline-block;
+}
+
+.contenedor header nav .menu .contacto-menu{
+    border: none;
+}
+
+.contenedor header nav .menu a:hover{
+   font-weight: bold;
+}
+
+/**************** SLIDE ****************/
+
+.contenedor .foto{
+    position: relative;
+
+}
+
+.contenedor .mySlides{
+    display: none;
+}
+
+.contenedor .foto .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    font-size: 60px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    margin: 0 30px;
+    background: rgba(0, 0, 0, .5);
+    line-height: 60px;
+    padding: 0 10px 8px 10px;
+}
+
+.contenedor .foto .prev:hover{
+    background: rgba(0, 0, 0, .8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px;
+}
+
+.next:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+.fade1 {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade{
+    0% {opacity: .9}
+    25% {opacity: .7} 
+    50% {opacity: .8}
+    75% {opacity: .9;}
+    100% {opacity: 1;}
+}
+  
+@keyframes fade{
+    from {opacity: .6} 
+    to {opacity: 1}
+}
+
+
+
+.contenedor .foto img{
+    width: 100%;
+    max-height: 600px;
+}
+
+.contenedor .foto article{
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 200px;
+    border-radius: 5px;
+}
+.contenedor .foto article .nombre{
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.contenedor .foto article .descripcion{
+    margin-bottom: 20px;
+
+}
+
+.contenedor .foto article .btnMain{
+    padding: 10px 20px;
+    background: var(--btn-color);
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.contenedor .foto article .btnMain:hover{
+    background: var(--btn-color-hover);
+}
+
+/* ------------------- MAIN -----------------*/
+
+.contenedor .main .eslogan {
+    width: 80%;
+    margin: auto;
+}
+
+.contenedor .main .eslogan h2{
+    margin-bottom: 10px;
+}
+
+.contenedor .main .eslogan{
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+.contenedor .main .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 0 35px;
+    text-align: center;
+
+}
+
+.contenedor .main h3{
+    font-size: 35px;
+    text-align: center;
+    background: var(--main-color);
+    color: #fff;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.contenedor .main .galeria .inmueble{
+    width: 33%;
+    height: 500px; /*no existia*/
+    margin: auto;
+    margin-bottom: 50px; /*20px*/
+}
+
+/* No existia */
+
+.contenedor .main .galeria .show{
+    margin-bottom: 20px;
+    height: 330px;
+}
+ 
+.contenedor .main .galeria .inmueble .foto img{
+    width: 100%;
+    border-radius: 3px;
+}
+
+.contenedor .main .galeria .inmueble .descripcion{
+    padding: 20px;
+    line-height: 16px; /*26px*/
+}
+
+.contenedor .main .galeria .inmueble .descripcion .nombre{
+    font-size: 16px; /*20px*/
+    font-weight: bold;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+    height: 35px; /*no existia*/
+}
+
+.contenedor .main .galeria .inmueble .descripcion .caracteristicas{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    height: 60px; /*no existia*/
+}
+
+/*No existia */
+
+.contenedor .main .galeria .descripcion {
+
+border-bottom: none;
+width: 80%;
+margin:auto;
+
+}
+/*No existia*/
+.contenedor .main .galeria .descripcion .caracteristicas {
+
+    padding: 25px 0;
+
+}
+
+.contenedor .main .galeria .inmueble .descripcion .btn{
+    padding: 10px 20px;
+    background: var(--btn-color);
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.contenedor .main .galeria .inmueble .descripcion .btn:hover{
+    background: var(--btn-color-hover);
+}
+
+
+/******************* CONTACTO y ACERCA DE*********************/
+
+.contenedor .relleno {
+    width: 100%;
+    padding: 60px;
+    background: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.contenedor .acerca-de {
+    width: 50%;
+    float: left;
+    padding: 25px;
+    border-right: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.contenedor .acerca-de h3{
+    font-size: 16px;
+    text-align: center;
+}
+
+.contenedor .acerca-de p{
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.contenedor .contacto {
+    width: 50%;
+    float: left;
+    padding: 25px;
+    text-align: center;
+}
+
+.contenedor .contacto h3{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor .contacto p{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.contenedor .acerca-de .foto img{
+    width: 50%;
+}
+
+.contenedor .acerca-de .foto {
+    text-align: center;
+}
+
+/*********** FOOTER ***************/
+
+.contenedor footer{
+    width: 100%;
+    clear: both;
+    background: var(--main-color);
+    padding: 30px 30px 60px 30px;
+    color: #fff;
+}
+
+.contenedor footer p{
+    width: 50%;
+    float: left;
+    word-spacing: 8px;
+    text-align: center;
+}
+
+.contenedor footer .redes-sociales{
+    width: 50%;
+    float: left;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    padding-left: 80px;
+}
+
+footer .redes-sociales a {
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-size: 20px;
+}
+
+.contenedor footer .redes-sociales .twitter{margin-right: 40px;background: #1da1f2; }
+.contenedor footer .redes-sociales .facebook{margin-right: 40px;background: #3b5998; padding: 5px 13px;}
+.contenedor footer .redes-sociales .instagram{margin-right: 40px;background: #c13584;}
+
+
+/*************** MEDIA QUERIES ********************/
