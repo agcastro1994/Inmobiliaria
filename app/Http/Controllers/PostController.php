@@ -10,6 +10,13 @@ use App\Images;
 
 class PostController extends Controller
 {
+
+         public function __construct(){
+
+            $this->middleware('auth')->except('index','show');
+            
+        }
+
          public function create(){
 
     	return view('main.create');

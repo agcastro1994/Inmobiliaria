@@ -37,6 +37,9 @@ Route::get('/posts/{post}', 'PostController@show');
 
 Route::get('/posts/edit/{post}', 'PostController@edit');
 
+Route::get('/posts/delete/{post}', 'PostController@delete');
+
+
 
 
 // Route::get('images/{archive}', function ($archive) {
@@ -51,3 +54,7 @@ Route::get('/posts/edit/{post}', 'PostController@edit');
 //      abort(404);
  
 // });
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

@@ -10,8 +10,11 @@
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus veniam neque, est rerum magnam obcaecati.</p>
             </div>
-            <h3>Galeria</h3>
-            <div class="galeria" id="galeria">
+            <h3>Galeria</h3> 
+            @if (Auth::check())
+            <h4> <a href="/posts/create">Crear Post</a></h4>
+            @endif
+                <div class="galeria" id="galeria">
                 <!-- <div class="inmueble">
                     <div class="foto">
                         <img src="https://cdn.trendir.com/wp-content/uploads/old/house-design/assets_c/2014/02/beautiful-house-courtyard-swimming-pool-1-thumb-970xauto-34265.jpg" alt="">
