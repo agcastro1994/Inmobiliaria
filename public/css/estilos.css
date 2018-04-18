@@ -75,7 +75,7 @@ body{
     display: none;
 }
 
-.contenedor .foto .prev, .next {
+.contenedor .foto .prev, .contenedor .foto .next {
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -88,6 +88,10 @@ body{
     line-height: 60px;
     padding: 0 10px 8px 10px;
 }
+
+/*.contenedor .foto .next {
+    color:#fff;
+}*/
 
 .contenedor .foto .prev:hover{
     background: rgba(0, 0, 0, .8);

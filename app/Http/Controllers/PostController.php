@@ -14,7 +14,7 @@ class PostController extends Controller
          public function __construct(){
 
             $this->middleware('auth')->except('index','show');
-            
+
         }
 
          public function create(){
@@ -57,11 +57,15 @@ public function index(){
         
 
         //ordering the post by date, from latest to newest
-            $posts = Post::latest();
+            $posts = Post::latest()->paginate(6);
 
-            $posts = $posts->get();
+            // $posts = $posts->get();
 
             $images = Images::latest()->where("principal","=",true)->get();
+
+            
+ 
+    
         
 
         return view('main.index', compact('posts','images'));   

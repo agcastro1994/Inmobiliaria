@@ -6,7 +6,7 @@
            @include('layouts.jumbotron')
         
         <section class="main">
-            <div class="eslogan">
+            <div class="eslogan" id="eslogan">
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus veniam neque, est rerum magnam obcaecati.</p>
             </div>
@@ -99,14 +99,17 @@
             @endif
 
             @if($x > 3)
-                @if($x%3==1)
+                @if($x%3==2)
                     <div class="inmueble"></div>
                 @endif
-                @if($x%3==2)
+                @if($x%3==1)
                     <div class="inmueble"></div>
                     <div class="inmueble"></div>
                 @endif
             @endif
+
+          
+            <?php echo $posts->fragment('eslogan')->links(); ?>
 
                 
         </div>
@@ -119,7 +122,7 @@
         <section class="acerca-de" id="acercaDe">
             <h3>Acerca de</h3>
             <div class="foto">
-                <img src="imagenes/persona.jpg" alt="">
+                <img src="images/persona.jpg" alt="">
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam veritatis illum autem a fuga maxime, consequatur, modi laboriosam ex ab qui deleniti rerum perferendis minima.</p>
         </section>
