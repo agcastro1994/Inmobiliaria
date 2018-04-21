@@ -81,4 +81,69 @@ public function index(){
 
     }
 
+    public function edit($id){
+
+         $post=Post::find($id);
+        
+
+     return view('main.edit', compact('post')); 
+
+     }
+
+    // public function editResume($id){
+
+    //     $post=Post::find($id);
+        
+
+    //     return view('main.resume', compact('post')); 
+
+    // }
+
+    // public function editDescription($id){
+
+    //     $post=Post::find($id);
+        
+
+    //     return view('main.description', compact('post')); 
+
+    // }
+
+    public function editStore($id){
+       $post = Post::find($id);
+
+        $post->title= request('title');
+        $post->description= request('description');
+        $post->resume= request('resume');
+        $post->save();
+
+        
+        return redirect('/home');
+
+    } 
+
+    public function delete($id) {
+   $post = Post::find($id);
+
+   if($post == null)
+       return "No existe este post";
+   else
+       $post->delete();
+
+   return redirect('/home');
+    }
+
+    public function deleteImage ($id) {
+   $image = Images::find($id);
+
+   if($image == null)
+       return "No existe la imagen";
+   else
+       $image->delete();
+
+   return back();
+
+
+
+}
+
 }

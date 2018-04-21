@@ -14,7 +14,8 @@
                         <a href="/posts/{{ $post->id }}"> <button class="btn" id="btnGaleria">Ver</button></a>
                         @if (Auth::check())
                           <a href="/posts/edit/{{ $post->id }}"> <button class="btn " id="btnGaleria">Editar</button></a>
-                          <a href="#"> <button class="btn" id="btnGaleria">Eliminar</button></a>
+                      
+                           <a href="/posts/delete/{{ $post->id }}"> <button class="btn" id="btnGaleria">Eliminar</button></a>
                          @endif
                   </div>    
                 </div>                               

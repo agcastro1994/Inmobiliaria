@@ -9,6 +9,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus veniam neque, est rerum magnam obcaecati.</p>
             </div>
             <h3>{{ $post->title }}</h3>
+            
             <div class="galeria" id="galeria">
 
 	  <?php $x=0;  ?>
@@ -19,6 +20,9 @@
                   <div class="foto">
                     <img src="{{ $image->route }}" width="400px" height="300px">   
                   </div>
+                  @if (Auth::check())
+                     <a href="/posts/delete/image/{{ $image->id }}"> <button class="btn " id="btnGaleria">Eliminar</button></a>
+                  @endif
               </div>
               <?php $x++;  ?>
      @endforeach
@@ -47,7 +51,9 @@
                   <div class="descripcion">
                         
                         <div class="caracteristicas">{{$post->resume}}</div>
+                        
                         <div class="caracteristicas show">{{$post->description}}</div>
+                        
                   </div>    
                 <!-- </div>  --> 
                 </div>

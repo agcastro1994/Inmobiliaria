@@ -37,7 +37,11 @@ Route::get('/posts/{post}', 'PostController@show');
 
 Route::get('/posts/edit/{post}', 'PostController@edit');
 
+Route::post('/posts/edit/store/{post}', 'PostController@editStore');
+
 Route::get('/posts/delete/{post}', 'PostController@delete');
+
+Route::get('/posts/delete/image/{image}','PostController@deleteImage');
 
 
 
